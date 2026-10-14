@@ -1,177 +1,189 @@
-# 🌾 HỆ THỐNG QUẢN LÝ CỬA HÀNG BÁN THUỐC TRỪ SÂU (QL_CuaHangBanThuocTruSau)
+# 🌾 PESTICIDE STORE MANAGEMENT SYSTEM (QL_CuaHangBanThuocTruSau)
 
-> **DỰ ÁN BÀI TẬP LỚN CUỐI KỲ - HỌC PHẦN LẬP TRÌNH C# / .NET**
----
-## 📌 GIỚI THIỆU DỰ ÁN
-
-**Hệ Thống Quản Lý Cửa Hàng Bán Thuốc Trừ Sâu** là ứng dụng desktop (Windows Forms Application) được xây dựng dựa trên ngôn ngữ **C#** và nền tảng **.NET Framework**. 
-
-Dự án được thiết kế nhằm giúp các cửa hàng, đại lý kinh doanh vật tư nông nghiệp & thuốc bảo vệ thực vật tối ưu hóa quy trình quản lý bán hàng, nhập kho, quản lý lô hàng - hạn sử dụng, theo dõi công nợ khách hàng & nhà cung cấp, đồng thời cung cấp báo cáo thống kê trực quan cho chủ cửa hàng.
+> **FINAL COURSE PROJECT - C# / .NET PROGRAMMING**
 
 ---
 
-## 👥 THÀNH VIÊN THỰC HIỆN
+## 📌 PROJECT OVERVIEW
 
-| STT | Họ và Tên | Vai trò | Nhiệm vụ chính |
-| :-: | :--- | :--- | :--- |
-| 1 | **Lê Trần Khang** | **Nhóm trưởng** | Quản lý chung, thiết kế kiến trúc hệ thống, phát triển module quản lý tài khoản & Thống kê Dashboard |
-| 2 | **Lê Hồng Gấm** | Thành viên | Phát triển module Bán hàng, Quản lý khách hàng |
-| 3 | **Phan Tuấn Kha** | Thành viên | Phát triển module Quản lý Kho, Lô hàng & Nhập hàng từ Nhà cung cấp, công nợ |
-| 4 | **Trần Thái Kiệt** | Thành viên | Phát triển module quản lý Sản phẩm, các biến thể, lô hàng, đồng bộ giao diện |
+**Pesticide Store Management System** is a desktop application (Windows Forms Application) built with **C#** and the **.NET Framework**.
+
+The project is designed to help agricultural supply and pesticide stores optimize sales and purchasing workflows, manage batches and expiration dates, track customer and supplier debts, and provide clear statistical reports for store owners.
 
 ---
 
-## ✨ CHỨC NĂNG CHÍNH
+## 👥 TEAM MEMBERS
 
-### 1. 🔑 Hệ Thống & Tài Khoản
-* **Đăng nhập & Phân quyền**: Phân quyền truy cập cho Quản lý và Nhân viên bán hàng.
-* **Bảo mật & Xác thực OTP**: Hỗ trợ khôi phục / quên mật khẩu qua mã xác thực tự động gửi đến Email người dùng.
-* **Quản lý người dùng**: Thêm, sửa, khóa/mở khóa tài khoản nhân viên.
-
-### 2. 📦 Quản Lý Sản Phẩm & Lô Hàng
-* **Quản lý danh mục**: Phân loại các nhóm thuốc trừ sâu, phân bón, vật tư nông nghiệp.
-* **Quản lý biến thể sản phẩm**: Quản lý quy cách đóng gói (chai, gói, xô, thùng...), đơn vị tính và giá bán tương ứng.
-* **Quản lý Lô hàng (Batch Management)**: Theo dõi số lô, ngày sản xuất và hạn sử dụng của thuốc để cảnh báo thuốc sắp hết hạn.
-
-### 3. 🛒 Quản Lý Bán Hàng (POS)
-* Lập hóa đơn bán hàng nhanh chóng, hỗ trợ tìm kiếm sản phẩm thông minh.
-* Tự động trừ tồn kho theo đúng lô hàng (FIFO - Lô hết hạn trước xuất trước).
-* In hóa đơn bán hàng và lưu lịch sử giao dịch chi tiết.
-
-### 4. 🚚 Quản Lý Nhập Hàng & Nhà Cung Cấp
-* Quản lý thông tin nhà cung cấp (tên, số điện thoại, địa chỉ, công nợ).
-* Lập phiếu nhập hàng, quản lý thông tin lô hàng nhập về kho.
-* Theo dõi lịch sử nhập kho chi tiết.
-
-### 5. 💳 Quản Lý Công Nợ
-* **Công nợ Khách hàng**: Theo dõi khoản nợ, thanh toán và lịch sử giao dịch nợ của khách mua hàng.
-* **Công nợ Nhà cung cấp**: Quản lý các khoản nợ cần trả cho nhà cung cấp.
-
-### 6. 📊 Dashboard & Thống Kê
-* Trực quan hóa doanh thu, lợi nhuận, số lượng đơn hàng theo ngày/tháng/năm.
-* Cảnh báo sản phẩm sắp hết hàng trong kho hoặc lô thuốc sắp hết hạn sử dụng.
+| No. | Name               | Role            | Main Responsibilities                                                                               |
+| :-: | :----------------- | :-------------- | :-------------------------------------------------------------------------------------------------- |
+|  1  | **Lê Trần Khang**  | **Team Leader** | General management, system architecture design, account management module, and Dashboard statistics |
+|  2  | **Lê Hồng Gấm**    | Member          | Sales and customer management modules                                                               |
+|  3  | **Phan Tuấn Kha**  | Member          | Inventory, batch management, supplier purchasing, and debt management modules                       |
+|  4  | **Trần Thái Kiệt** | Member          | Product, product variant, and batch management modules, plus interface integration                  |
 
 ---
 
-## 🛠️ CÔNG NGHỆ & KIẾN TRÚC SỬ DỤNG
+## ✨ KEY FEATURES
 
-* **Ngôn ngữ lập trình**: C# (.NET Framework)
-* **Giao diện người dùng (GUI)**: Windows Forms (WinForms)
-* **Quản trị CSDL**: Microsoft SQL Server
-* **ORM & Data Access**: Entity Framework (Code First / DbContext)
-* **Mô hình kiến trúc**: 3-Tier Architecture / Layered Pattern (Presentation - Business Logic (BUS) - Data Access (DAO/Context))
-* **Gửi Email SMTP**: `System.Net.Mail` kết hợp Google SMTP Server (gửi OTP khôi phục mật khẩu).
+### 1. 🔑 System & Accounts
+
+- **Login & Access Control**: Provides access permissions for managers and sales staff.
+- **Security & OTP Verification**: Supports password recovery through verification codes sent automatically to the user's email.
+- **User Management**: Add, edit, lock, and unlock employee accounts.
+
+### 2. 📦 Product & Batch Management
+
+- **Category Management**: Classifies pesticides, fertilizers, and agricultural supplies.
+- **Product Variant Management**: Manages packaging types (bottles, bags, buckets, boxes, etc.), units, and corresponding selling prices.
+- **Batch Management**: Tracks batch numbers, manufacturing dates, and expiration dates to warn about products nearing expiration.
+
+### 3. 🛒 Sales Management (POS)
+
+- Quickly creates sales invoices and supports smart product search.
+- Automatically deducts inventory from the correct batches (FIFO - first-expiring batch, first out).
+- Prints sales invoices and stores detailed transaction history.
+
+### 4. 🚚 Purchasing & Supplier Management
+
+- Manages supplier information (name, phone number, address, and debt).
+- Creates receiving notes and manages batch information for incoming inventory.
+- Tracks detailed inventory receiving history.
+
+### 5. 💳 Debt Management
+
+- **Customer Debt**: Tracks debts, payments, and debt transaction history for customers.
+- **Supplier Debt**: Manages outstanding amounts owed to suppliers.
+
+### 6. 📊 Dashboard & Statistics
+
+- Visualizes revenue, profit, and order quantities by day, month, or year.
+- Alerts users about low-stock products and batches nearing expiration.
 
 ---
 
-## 📁 CẤU TRÚC THƯ MỤC DỰ ÁN
+## 🛠️ TECHNOLOGY & ARCHITECTURE
+
+- **Programming Language**: C# (.NET Framework)
+- **User Interface (GUI)**: Windows Forms (WinForms)
+- **Database Management**: Microsoft SQL Server
+- **ORM & Data Access**: Entity Framework (Code First / DbContext)
+- **Architecture**: 3-Tier Architecture / Layered Pattern (Presentation - Business Logic (BUS) - Data Access (DAO/Context))
+- **SMTP Email**: `System.Net.Mail` combined with Google SMTP Server for sending password recovery OTPs.
+
+---
+
+## 📁 PROJECT STRUCTURE
 
 ```text
 QL_thuoctrusau/
-├── BUS/                   # Business Logic Layer (Xử lý nghiệp vụ)
-├── DAO/                   # Data Access Object (Truy xuất CSDL)
-├── Context/               # DbContext & cấu hình Entity Framework
-├── Models/                # Các Entity Class (Product, Order, Customer, Batch,...)
-├── ViewModels/            # Các Model hỗ trợ hiển thị dữ liệu lên UI
-├── Controllers/           # Điều khiển luồng xử lý giữa View và BUS
-├── Views/                 # Giao diện màn hình Windows Forms (Form Đăng nhập, Bán hàng, Kho,...)
-├── Utils/                 # Các tiện ích chung:
-│   ├── EmailHelper.cs     # Helper xử lý gửi email OTP xác thực qua SMTP
-│   ├── ExcelHelper.cs      # Xuất báo cáo dữ liệu ra file Excel
-│   ├── InvoicePrinter.cs  # Hỗ trợ in hóa đơn bán hàng
-│   ├── Logger.cs          # Ghi log hệ thống & bắt lỗi exception
-│   └── ReportHelper.cs   # Hỗ trợ xuất báo cáo thống kê
-├── Migrations/            # Quản lý phiên bản CSDL Entity Framework
-├── ImagesProducts/        # Thư mục chứa hình ảnh sản phẩm
-├── App.config             # Cấu hình chuỗi kết nối CSDL (ConnectionString)
-├── Program.cs             # Entry point của ứng dụng
-└── QL_CuaHangBanThuocTruSau.sln # File Solution của Visual Studio
+├── BUS/                   # Business Logic Layer (business processing)
+├── DAO/                   # Data Access Object (database access)
+├── Context/               # DbContext and Entity Framework configuration
+├── Models/                # Entity classes (Product, Order, Customer, Batch,...)
+├── ViewModels/            # Models supporting data presentation in the UI
+├── Controllers/           # Controls the processing flow between Views and BUS
+├── Views/                 # Windows Forms screens (Login, Sales, Inventory, ...)
+├── Utils/                 # Shared utilities:
+│   ├── EmailHelper.cs     # Sends verification OTP emails through SMTP
+│   ├── ExcelHelper.cs     # Exports data reports to Excel files
+│   ├── InvoicePrinter.cs  # Supports sales invoice printing
+│   ├── Logger.cs          # Records system logs and handles exceptions
+│   └── ReportHelper.cs    # Supports statistical report exports
+├── Migrations/            # Entity Framework database version management
+├── ImagesProducts/        # Product image directory
+├── App.config             # Database connection string configuration
+├── Program.cs             # Application entry point
+└── QL_CuaHangBanThuocTruSau.sln # Visual Studio solution file
 ```
 
 ---
 
-## 🚀 HƯỚNG DẪN CÀI ĐẶT & CHẠY DỰ ÁN
+## 🚀 INSTALLATION & RUNNING GUIDE
 
-### Yêu cầu hệ thống:
-* **Visual Studio 2019 / 2022** (Đã cài đặt workload *.NET desktop development*).
-* **Microsoft SQL Server** (phiên bản 2016 trở lên hoặc SQL Express) & **SSMS**.
+### System Requirements:
 
-### Các bước thực hiện:
+- **Visual Studio 2019 / 2022** (with the _.NET desktop development_ workload installed).
+- **Microsoft SQL Server** (version 2016 or later, or SQL Express) and **SSMS**.
 
-1. **Clone / Tải dự án**:
+### Steps:
+
+1. **Clone / Download the project**:
+
    ```bash
-   git clone <URL_REPOSITORY_CUA_NHOM>
+   git clone <TEAM_REPOSITORY_URL>
    ```
 
-2. **Mở dự án**:
-   * Mở file `QL_CuaHangBanThuocTruSau.sln` bằng Visual Studio.
+2. **Open the project**:
+   - Open `QL_CuaHangBanThuocTruSau.sln` in Visual Studio.
 
-3. **Cấu hình CSDL (Database Connection)**:
-   * Mở file `App.config`.
-   * Cập nhật lại chuỗi `connectionString` phù hợp với SQL Server trên máy của bạn:
+3. **Configure the database connection**:
+   - Open `App.config`.
+   - Update the `connectionString` to match your SQL Server:
      ```xml
      <connectionStrings>
-       <add name="QL_ThuocTruSauDbContext" 
-            connectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=QL_ThuocTruSauDB;Integrated Security=True;TrustServerCertificate=True" 
+       <add name="QL_ThuocTruSauDbContext"
+            connectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=QL_ThuocTruSauDB;Integrated Security=True;TrustServerCertificate=True"
             providerName="System.Data.SqlClient" />
      </connectionStrings>
      ```
 
-4. **Cập nhật Database (Entity Framework Migration)**:
-   * Mở cửa sổ **Package Manager Console** trong Visual Studio (`Tools -> NuGet Package Manager -> Package Manager Console`).
-   * Chạy lệnh cập nhật database:
+4. **Update the database (Entity Framework Migration)**:
+   - Open the **Package Manager Console** in Visual Studio (`Tools -> NuGet Package Manager -> Package Manager Console`).
+   - Run the database update command:
      ```powershell
      Update-Database
      ```
 
-5. **Biên dịch & Khởi chạy**:
-   * Nhấn `F5` hoặc nút `Start` trong Visual Studio để bắt đầu trải nghiệm ứng dụng.
+5. **Build & Run**:
+   - Press `F5` or click `Start` in Visual Studio to launch the application.
 
 ---
 
-## 📧 HƯỚNG DẪN CẤU HÌNH GỬI EMAIL XÁC THỰC (EMAILHELPER)
+## 📧 EMAIL VERIFICATION CONFIGURATION (EMAILHELPER)
 
-Để tính năng **Quên mật khẩu / Gửi mã xác thực OTP** qua Email hoạt động được, bạn cần cấu hình tài khoản Email gửi trong file `EmailHelper.cs`.
+For **password recovery / OTP verification by email** to work, configure the sending email account in `EmailHelper.cs`.
 
-### 📂 Vị trí file:
+### 📂 File location:
+
 [`QL_thuoctrusau/Utils/EmailHelper.cs`]
 
-### ⚙️ Các bước thay đổi Email:
+### ⚙️ Email configuration steps:
 
-1. Mở file [`Utils/EmailHelper.cs`]
-2. Thay đổi giá trị 2 hằng số `FromEmail` và `AppPassword`:
+1. Open [`Utils/EmailHelper.cs`].
+2. Change the values of the `FromEmail` and `AppPassword` constants:
 
 ```csharp
-namespace QL_CuaHangBanThuocTruSau.Utils 
+namespace QL_CuaHangBanThuocTruSau.Utils
 {
-    public static class EmailHelper 
+    public static class EmailHelper
     {
         private const string Host = "smtp.gmail.com";
         private const int Port = 587;
 
-        // 🟢 Thay bằng Email Gmail gửi đi của bạn
-        private const string FromEmail = "diachi-email-cua-ban@gmail.com"; 
+      // 🟢 Replace with your Gmail sending address
+      private const string FromEmail = "your-sending-email@gmail.com";
 
-        // 🟢 Thay bằng Mật khẩu ứng dụng (App Password) 16 ký tự tạo từ tài khoản Google
-        private const string AppPassword = "xxxx xxxx xxxx xxxx"; 
+      // 🟢 Replace with the 16-character App Password generated by Google
+        private const string AppPassword = "xxxx xxxx xxxx xxxx";
 
         // ...
     }
 }
 ```
 
-### 🔑 Cách lấy Mật khẩu ứng dụng (App Password) từ Gmail:
-1. Truy cập vào tài khoản Google của bạn tại [myaccount.google.com](https://myaccount.google.com/).
-2. Chọn mục **Bảo mật (Security)** -> Đảm bảo bạn đã bật **Xác minh 2 bước (2-Step Verification)**.
-3. Ở ô tìm kiếm phía trên, gõ **Mật khẩu ứng dụng (App Passwords)**.
-4. Tạo một tên ứng dụng mới (Ví dụ: `QL_ThuocTruSau`).
-5. Google sẽ tạo ra một mã mật khẩu gồm **16 ký tự**.
-6. Sao chép 16 ký tự này và dán vào hằng số `AppPassword` trong `EmailHelper.cs`.
+### 🔑 How to get a Gmail App Password:
 
-> ⚠️ **Lưu ý quan trọng**: Không sử dụng mật khẩu Gmail cá nhân thông thường. Phải sử dụng **App Password** của Google để đảm bảo tính năng gửi email không bị đòn chặn bởi cơ chế bảo mật của Gmail.
+1. Go to your Google account at [myaccount.google.com](https://myaccount.google.com/).
+2. Select **Security** and make sure **2-Step Verification** is enabled.
+3. Search for **App Passwords**.
+4. Create a new app name (for example, `QL_ThuocTruSau`).
+5. Google will generate a **16-character** password.
+6. Copy the password and paste it into the `AppPassword` constant in `EmailHelper.cs`.
+
+> ⚠️ **Important**: Do not use your regular personal Gmail password. You must use a Google **App Password** so email delivery is not blocked by Gmail security controls.
 
 ---
 
-## 📝 GIẤY PHÉP & THÔNG TIN BỔ SUNG
+## 📝 LICENSE & ADDITIONAL INFORMATION
 
-Dự án này được thực hiện trong khuôn khổ **Bài tập lớn cuối kỳ Học phần Lập trình C# / .NET**. Mọi thông tin và mã nguồn đều phục vụ cho mục đích học tập và nghiên cứu.
+This project was developed as part of the **final project for the C# / .NET Programming course**. All information and source code are provided for educational and research purposes.
