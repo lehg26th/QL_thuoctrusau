@@ -61,6 +61,70 @@ The project is designed to help agricultural supply and pesticide stores optimiz
 
 ---
 
+## 📸 SYSTEM DEMO & SCREENSHOTS
+
+Below are actual screenshots demonstrating the core features and workflows of the application, captured from the system:
+
+### 1. 🔑 Login & Access Control
+![Login Screen](docs/screenshots/01_dang_nhap.png)
+> Secure authentication interface featuring role-based access control (Admin / Staff) and an automated password recovery workflow using OTP verification codes sent to the user's registered email.
+
+---
+
+### 2. 📊 Executive Dashboard & Analytics
+![Dashboard Screen](docs/screenshots/02_dashboard_tong_quan.png)
+> Centralized dashboard visualizing essential business metrics: total revenue, actual profit, order volume, financial trends, along with proactive real-time alerts for low-stock items and batches nearing their expiration dates.
+
+---
+
+### 3. 👥 User Account & Permission Management
+![Account Management Screen](docs/screenshots/03_quan_ly_tai_khoan.png)
+> Employee account management module allowing administrators to create new staff accounts, assign roles (Admin / Staff), modify credentials, and safely lock or unlock user access.
+
+---
+
+### 4. 📦 Product & Catalog Management
+![Product Management Screen](docs/screenshots/04_quan_ly_san_pham.png)
+> Centralized catalog management for pesticides, fertilizers, and agricultural supplies; supports product image uploads, category classification, and fast multi-criteria search filters.
+
+---
+
+### 5. 🏷️ Product Variant & Packaging Management
+![Product Variants Screen](docs/screenshots/05_bien_the_san_pham.png)
+> Flexible packaging configuration for each product (bottles, bags, buckets, boxes), setting custom units of measurement and defining wholesale and retail pricing with strict business validation rules.
+
+---
+
+### 6. ⏳ Batch Tracking & Expiration Date Control
+![Batch Management Screen](docs/screenshots/06_quan_ly_lo_hang.png)
+> Master-Detail interface designed for granular inventory tracking, displaying batch numbers, manufacturing dates, expiration dates, and lifecycle statuses (Valid, Expiring Soon, Expired) to streamline warehouse auditing.
+
+---
+
+### 7. 📥 Purchasing & Supplier Goods Receiving
+![Receiving Notes Screen](docs/screenshots/07_nhap_hang.png)
+> Purchase order workflow for incoming agricultural supplies: select supplier, specify variant quantities and purchase unit costs, register new batch metadata, and automatically update warehouse stock.
+
+---
+
+### 8. 🛒 Point of Sale (POS) & Checkout
+![Sales POS Screen](docs/screenshots/08_ban_hang_pos.png)
+> Core sales register interface for counter staff: rapid product lookup, real-time cart summary, automatic FIFO stock deduction (first-expiring batch, first out), discount calculations, and customer linking.
+
+---
+
+### 9. 🧾 Professional Sales Invoice Receipt
+![Sales Invoice Receipt](docs/screenshots/09_hoa_don_ban_hang.png)
+> Standardized printable receipt presenting full store details, customer contact information, itemized list of purchased items, subtotal, discounts, and payment methods.
+
+---
+
+### 10. 💳 Customer & Supplier Debt Management
+![Debt Management Screen](docs/screenshots/10_quan_ly_cong_no.png)
+> Financial control center featuring summary metric cards (Customer Receivables, Supplier Payables, Total Outstanding Debt), flexible debt settlement dialogs (full or partial payments), and standardized Excel export reports for accounting reconciliation.
+
+---
+
 ## 🛠️ TECHNOLOGY & ARCHITECTURE
 
 - **Programming Language**: C# (.NET Framework)
@@ -76,6 +140,7 @@ The project is designed to help agricultural supply and pesticide stores optimiz
 
 ```text
 QL_thuoctrusau/
+├── docs/screenshots/     # Application screenshots and demo images
 ├── BUS/                   # Business Logic Layer (business processing)
 ├── DAO/                   # Data Access Object (database access)
 ├── Context/               # DbContext and Entity Framework configuration
